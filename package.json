@@ -1,0 +1,47 @@
+{
+  "name": "vue3-template",
+  "private": true,
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "cross-env SYSTEMROOT='C:\\windows' vite",
+    "build": "vue-tsc --noEmit && vite build",
+    "preview": "vite preview",
+    "prepare": "husky install",
+    "commit": "cz",
+    "lint": "eslint .",
+    "lint:fix": "eslint --fix ."
+  },
+  "dependencies": {
+    "@vueuse/core": "^8.6.0",
+    "vue": "^3.2.25",
+    "vue-router": "4"
+  },
+  "devDependencies": {
+    "@antfu/eslint-config": "^0.25.1",
+    "@commitlint/cli": "^17.0.2",
+    "@commitlint/config-conventional": "^17.0.2",
+    "@vitejs/plugin-vue": "^2.3.3",
+    "commitizen": "^4.2.4",
+    "cross-env": "^7.0.3",
+    "cz-conventional-changelog": "^3.3.0",
+    "eslint": "^8.17.0",
+    "husky": "^8.0.1",
+    "naive-ui": "^2.30.3",
+    "typescript": "^4.5.4",
+    "unplugin-auto-import": "^0.8.7",
+    "unplugin-vue-components": "^0.19.6",
+    "vite": "^2.9.9",
+    "vite-plugin-html": "^3.2.0",
+    "vite-plugin-windicss": "^1.8.4",
+    "vue-tsc": "^0.34.7",
+    "windicss": "^3.5.4"
+  },
+  "config": {
+    "commitizen": {
+      "path": "cz-conventional-changelog"
+    }
+  },
+  "lint-staged": {
+    "*.{js,jsx,vue,ts,tsx}": "eslint"
+  }
+}
