@@ -6,6 +6,7 @@ import { createHtmlPlugin } from 'vite-plugin-html'
 import AutoImport from 'unplugin-auto-import/vite'
 import Components from 'unplugin-vue-components/vite'
 import { NaiveUiResolver } from 'unplugin-vue-components/resolvers'
+import svgLoader from 'vite-svg-loader'
 
 const envPrefix = 'TEMPLATE_'
 // https://vitejs.dev/config/
@@ -50,6 +51,7 @@ export default defineConfig(({ mode }) => {
         ],
       }),
       WindiCSS(),
+      svgLoader(),
     ],
     server: {
       host: true,

@@ -1,5 +1,9 @@
 import { createApp } from 'vue'
-import App from './App.vue'
-import 'virtual:windi.css'
+import router from './router' // 路由
+import pluginRegister from './plugins' // 插件
+import 'virtual:windi.css' // windicss
 
-createApp(App).mount('#app')
+import '@/assets/fonts/index.css' // 字体文件
+import NaiveConfig from './NaiveConfig.vue' // Naive配置
+
+createApp(NaiveConfig).use(router).use(pluginRegister).mount('#app')
