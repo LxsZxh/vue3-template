@@ -1,7 +1,7 @@
 {
   "name": "vue3-template",
-  "private": true,
   "version": "0.0.0",
+  "private": true,
   "scripts": {
     "dev": "cross-env SYSTEMROOT='C:\\windows' vite",
     "build": "vue-tsc --noEmit && vite build",
