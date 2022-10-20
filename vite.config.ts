@@ -7,11 +7,13 @@ import AutoImport from 'unplugin-auto-import/vite'
 import Components from 'unplugin-vue-components/vite'
 import { NaiveUiResolver } from 'unplugin-vue-components/resolvers'
 import svgLoader from 'vite-svg-loader'
+import vueJsx from '@vitejs/plugin-vue-jsx'
 
 const envPrefix = 'TEMPLATE_'
 // https://vitejs.dev/config/
 
 export default defineConfig(({ mode }) => {
+  // 合并环境变量
   process.env = { ...process.env, ...loadEnv(mode, process.cwd(), envPrefix) }
   const { TEMPLATE_DEV_PORT } = process.env
 
@@ -25,6 +27,9 @@ export default defineConfig(({ mode }) => {
     plugins: [
       vue({
         include: [/\.vue$/],
+      }),
+      vueJsx({
+        include: [/\.tsx$/],
       }),
 
       createHtmlPlugin({
@@ -57,7 +62,10 @@ export default defineConfig(({ mode }) => {
       host: true,
       port: Number(TEMPLATE_DEV_PORT),
       proxy: {
-
+        // '^/backend': 'http://139.224.23.208:81',
+        // '^/pc': 'http://139.224.23.208:80',
+        '^/backend': 'http://192.168.0.35:61',
+        '^/pc': 'http://192.168.0.35:60',
       },
     },
   }
