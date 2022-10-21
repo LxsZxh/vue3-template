@@ -30,7 +30,7 @@ module.exports = {
     }
   }),
   messages: {
-    type: '确保本次提交遵循 易启策代码提交 规范！选择你要提交的类型：\n',
+    type: '确保本次提交遵循Git代码提交规范！选择你要提交的类型：\n',
     scope: '选择一个 scope (可选):',
     customScope: '请输入自定义的 scope:',
     subject: '填写简短精炼的变更描述：',
