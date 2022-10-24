@@ -33,10 +33,10 @@ module.exports = {
     type: '确保本次提交遵循Git代码提交规范！选择你要提交的类型：\n',
     scope: '选择一个 scope (可选):',
     customScope: '请输入自定义的 scope:',
-    subject: '填写简短精炼的变更描述：',
-    body: '填写更加详细的变更描述 (可选). 使用 "|" 换行：',
+    subject: '填写简短精炼的变更描述:',
+    body: '填写更加详细的变更描述 (可选). 使用 "|" 换行:',
     breaking: '列举非兼容性重大的变更 (可选):',
-    footer: '列举出所有变更的 Issues Closed (可选). 例如: #31, #34：',
+    footer: '列举出所有变更的 Issues Closed (可选). 例如: #31, #34:',
     confirmCommit: '确认提交？'
   },
   allowBreakingChanges: ['feat', 'fix'],
