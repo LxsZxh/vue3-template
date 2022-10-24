@@ -25,6 +25,12 @@ const router = createRouter({
           meta: { title: '图表' },
           component: () => import('@/pages/content/echarts/Index.vue'),
         },
+        {
+          path: '/editor',
+          name: 'editor',
+          meta: { title: '富文本编辑器' },
+          component: () => import('@/pages/content/editor/Index.vue'),
+        },
       ],
     },
   ],

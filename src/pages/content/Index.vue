@@ -11,23 +11,36 @@ function goEcharts() {
     name: 'echarts',
   })
 }
+
+function goEditor() {
+  router.push({
+    name: 'editor',
+  })
+}
 </script>
 
 <template>
   <div class="flex flex-col">
     <span>鼠标位置:{{ x }}--{{ y }}</span>
-    <div>
-      <span class="mr-10px">数字:{{ store.count }}</span>
+    <div class="mb-10px">
+      <p class="mr-10px mb-10px">
+        数字:{{ store.count }}
+      </p>
       <n-button type="primary" @click="store.increment">
         +1
       </n-button>
     </div>
-    <div>
-      <n-button type="success" @click="goEcharts">
+
+    <div class="mb-10px">
+      <n-button type="success" class="mr-10px" @click="goEcharts">
         图表
       </n-button>
-      <router-view />
+      <n-button type="success" @click="goEditor">
+        富文本编辑器
+      </n-button>
     </div>
+
+    <router-view />
   </div>
 </template>
 
