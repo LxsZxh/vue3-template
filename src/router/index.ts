@@ -5,17 +5,27 @@ const router = createRouter({
   routes: [
     {
       path: '/',
-      redirect: { name: 'home', hash: '#index' },
+      redirect: { name: 'content' },
     },
     {
       path: '/home',
       name: 'home',
+      meta: { title: '首页' },
       component: () => import('@/pages/home/Index.vue'),
     },
     {
       path: '/content',
       name: 'content',
+      meta: { title: '内容区' },
       component: () => import('@/pages/content/Index.vue'),
+      children: [
+        {
+          path: '/echarts',
+          name: 'echarts',
+          meta: { title: '图表' },
+          component: () => import('@/pages/content/echarts/Index.vue'),
+        },
+      ],
     },
   ],
 })
